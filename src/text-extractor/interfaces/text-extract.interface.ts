@@ -1,6 +1,6 @@
+import { fileObjectDto } from '../dtos/file-object.dto';
+
 export interface ITextExtract {
-  filename?: string;
-  mimeType?: string;
-  file?: string;
-  errorMessage?: string;
+  message: string;
+  data?: fileObjectDto;
 }

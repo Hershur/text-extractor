@@ -1,5 +1,7 @@
-export const validFileMimeTypes = [
+export const validMimeTypes = [
   'text/html',
-  'application/javascript',
+  'application/xml',
   'application/x-cshtml',
+  'application/octet-stream',
+  'text/csv',
 ];

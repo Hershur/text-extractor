@@ -1,5 +1,7 @@
 import {
   Controller,
+  HttpCode,
+  HttpStatus,
   Post,
   UploadedFile,
   UseInterceptors,
@@ -14,6 +16,7 @@ export class TextExtractorController {
   constructor(private readonly textExractorService: TextExtractorService) {}
 
   @UseInterceptors(FileInterceptor('file'))
+  @HttpCode(HttpStatus.OK)
   @Post()
   textExtractor(@UploadedFile() file: Express.Multer.File): ITextExtract {
     return this.textExractorService.extractText(file);
